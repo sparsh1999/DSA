@@ -1,4 +1,8 @@
 // also solve combinationSum1
+// difference between this and combinationSum1 is
+// 1. we can have duplicate elements
+// 2. we cant include a element more then once 
+//
 import java.util.*;
 
 public class Main
@@ -20,6 +24,8 @@ public class Main
     	}
     	if(a[i]<=x){
     		stack.add(a[i]);
+		// this is also different, we included this elemet , so now include next one 
+		// in combinationSum1 , we can include it again
     		findCombination(i+1, x-a[i], stack);
     		stack.pop();
     		int j = i+1;
