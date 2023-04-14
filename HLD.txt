@@ -1,0 +1,15 @@
+Design a scalable architecture for a web application.
+Design a messaging system like WhatsApp or Facebook Messenger.
+Design a distributed system for a ride-sharing service like Uber or Lyft.
+Design a recommendation system like Amazon or Netflix.
+Design a payment gateway system like PayPal or Stripe.
+Design a search engine like Google or Bing.
+Design a video streaming service like YouTube or Netflix.
+Design a booking system for a hotel or airline.
+Design a real-time collaborative editor like Google Docs.
+Design a food delivery system like Grubhub or DoorDash.
+Design a healthcare management system for hospitals or clinics.
+Design a social networking site for professionals like LinkedIn.
+Design a content management system for a news site or blog.
+Design a weather forecasting system.
+Design a recommendation system for e-commerce websites.
