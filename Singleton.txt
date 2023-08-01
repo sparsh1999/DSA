@@ -1,0 +1,36 @@
+
+thread safe singleton pattern 
+
+public class singleton {
+	private static Singleton singleton;
+	
+	public static getInstance() {
+		if (singleton==null)
+		syncronized(Singleton.class){
+			if (singleton!=null){
+				singleton = new Singleton();
+			}
+		}
+		return singleton;
+	}
+}
+
+By the way, double-checked locking idiom was broken before Java 5. It was possible for a thread to see a half initialized instance which will fail the first null check, resulting in returning a half-initialized Singleton. That's why it's absolutely critical to make _instnace a volatile variable. The Java memory model updates and happens-before makes double-checked locking works again.
+
+Read more: https://www.java67.com/2015/09/thread-safe-singleton-in-java-using-double-checked-locking-pattern.html#ixzz896vQRHvg
+
+
+is static method thread safe 
+
+no , so static method can be accessed by multiple threads at the same time, however if they are only accesing a variable that's fine 
+
+but if they are also modifying , then no they are also not thread safe
+
+that's why we need static syncronization so that only one thread enters method 
+
+
+applying syncronization on the method is slow (why because all callls will be blocked) 
+we should only block write calls 
+
+now as access to volatile variables is slow as they are directly read from main memory
+so keep a local variable 
